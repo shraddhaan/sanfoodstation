@@ -1,0 +1,97 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Food Category</title>\
+    <style>\
+        body \{ font-family: Arial, sans-serif; margin: 0; padding: 0; \}\
+        header \{ background: #ff5733; color: white; text-align: center; padding: 15px; \}\
+        nav \{ text-align: center; background: #ffa07a; padding: 10px; \}\
+        nav a \{ margin: 0 15px; color: white; text-decoration: none; font-weight: bold; \}\
+        .container \{ padding: 20px; text-align: center; \}\
+        .menu \{ display: flex; flex-wrap: wrap; justify-content: center; \}\
+        .menu-item \{ margin: 15px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; text-align: center; \}\
+        .menu-item img \{ width: 150px; height: 150px; border-radius: 10px; \}\
+        footer \{ background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; \}\
+        .tabs \{ display: flex; justify-content: center; margin-bottom: 20px; \}\
+        .tab \{ padding: 10px 20px; margin: 5px; background: #ff5733; color: white; cursor: pointer; border-radius: 5px; \}\
+        .tab.active \{ background: #c70039; \}\
+        .menu-content \{ display: none; \}\
+        .menu-content.active \{ display: flex; flex-wrap: wrap; justify-content: center; \}\
+    </style>\
+    <script>\
+        function showMenu(type) \{\
+            document.querySelectorAll('.menu-content').forEach(el => el.classList.remove('active'));\
+            document.getElementById(type).classList.add('active');\
+            document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));\
+            document.getElementById(type + '-tab').classList.add('active');\
+        \}\
+    </script>\
+</head>\
+<body>\
+    <header>\
+        <h1>Welcome to Food Category</h1>\
+    </header>\
+    <nav>\
+        <a href="#home">Home</a>\
+        <a href="#about">About Us</a>\
+        <a href="#menu">Menu</a>\
+        <a href="#contact">Contact</a>\
+    </nav>\
+    <section id="home" class="container">\
+        <h2>Delicious Foods for You!</h2>\
+        <p>Explore various food categories and enjoy delicious meals.</p>\
+    </section>\
+    <section id="about" class="container">\
+        <h2>About Us</h2>\
+        <p>We are passionate about food and love sharing delicious recipes with everyone.</p>\
+    </section>\
+    <section id="menu" class="container">\
+        <h2>Our Menu</h2>\
+        <div class="tabs">\
+            <div id="veg-tab" class="tab active" onclick="showMenu('veg')">Veg</div>\
+            <div id="nonveg-tab" class="tab" onclick="showMenu('nonveg')">Non-Veg</div>\
+        </div>\
+        <div id="veg" class="menu-content active">\
+            <div class="menu-item">\
+                <img src="https://via.placeholder.com/150" alt="Paneer Butter Masala">\
+                <h3>Paneer Butter Masala</h3>\
+                <p>Rich and creamy paneer dish.</p>\
+            </div>\
+            <div class="menu-item">\
+                <img src="https://via.placeholder.com/150" alt="Veg Biryani">\
+                <h3>Veg Biryani</h3>\
+                <p>Flavorful and aromatic rice dish.</p>\
+            </div>\
+        </div>\
+        <div id="nonveg" class="menu-content">\
+            <div class="menu-item">\
+                <img src="https://via.placeholder.com/150" alt="Chicken Curry">\
+                <h3>Chicken Curry</h3>\
+                <p>Spicy and delicious chicken curry.</p>\
+            </div>\
+            <div class="menu-item">\
+                <img src="https://via.placeholder.com/150" alt="Fish Fry">\
+                <h3>Fish Fry</h3>\
+                <p>Crunchy and flavorful fish fry.</p>\
+            </div>\
+        </div>\
+    </section>\
+    <section id="contact" class="container">\
+        <h2>Contact Us</h2>\
+        <p>Email: contact@foodcategory.com</p>\
+    </section>\
+    <footer>\
+        <p>&copy; 2025 Food Category. All Rights Reserved.</p>\
+    </footer>\
+</body>\
+</html>\
+}
